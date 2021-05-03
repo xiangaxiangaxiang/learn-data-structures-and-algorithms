@@ -1,19 +1,31 @@
 {
-  "name": "learn-data-structures-and-algorithms",
-  "version": "1.0.0",
-  "description": "",
-  "main": ".eslintrc.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xiangaxiangaxiang/learn-data-structures-and-algorithms.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/xiangaxiangaxiang/learn-data-structures-and-algorithms/issues"
-  },
-  "homepage": "https://github.com/xiangaxiangaxiang/learn-data-structures-and-algorithms#readme"
+    "name": "learn-data-structures-and-algorithms",
+    "version": "1.0.0",
+    "description": "",
+    "main": ".eslintrc.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "start": "webpack serve --open"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xiangaxiangaxiang/learn-data-structures-and-algorithms.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/xiangaxiangaxiang/learn-data-structures-and-algorithms/issues"
+    },
+    "homepage": "https://github.com/xiangaxiangaxiang/learn-data-structures-and-algorithms#readme",
+    "devDependencies": {
+        "clean-webpack-plugin": "^4.0.0-alpha.0",
+        "html-webpack-plugin": "^5.3.1",
+        "ts-loader": "^9.1.1",
+        "typescript": "^4.2.4",
+        "webpack": "^5.36.2",
+        "webpack-cli": "^4.6.0",
+        "webpack-dev-server": "^3.11.2"
+    },
+    "dependencies": {}
 }
