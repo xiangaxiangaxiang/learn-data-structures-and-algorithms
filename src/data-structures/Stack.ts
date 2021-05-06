@@ -1,5 +1,5 @@
 export class ArrayStack<T> {
-    private items: T[]
+    protected items: T[]
     constructor() {
         this.items = []
     }
@@ -30,8 +30,8 @@ export class ArrayStack<T> {
 }
 
 export class ObjectStack<T> {
-    private items: any
-    private count: number = 0
+    protected items: any
+    protected count: number = 0
 
     constructor() {
         this.items = {}

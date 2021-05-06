@@ -1,8 +1,8 @@
 // 队列
 export class Queue<T = any> {
-    private count: number
-    private lowestCount: number
-    private items: any
+    protected count: number
+    protected lowestCount: number
+    protected items: any
     constructor() {
         this.count = 0
         this.lowestCount = 0

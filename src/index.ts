@@ -1,3 +1,4 @@
-export { ObjectStack } from '../src/data-structures/Stack'
-export { Queue } from '../src/data-structures/Queue'
-export { Deque } from '../src/data-structures/Deque'
+export { ObjectStack } from './data-structures/stack'
+export { Queue } from './data-structures/queue'
+export { Deque } from './data-structures/deque'
+export { LinkedList } from './data-structures/linked-list'
