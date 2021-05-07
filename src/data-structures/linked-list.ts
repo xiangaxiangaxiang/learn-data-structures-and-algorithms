@@ -88,6 +88,11 @@ export class LinkedList<T> {
         return this.head
     }
 
+    clear() {
+        this.head = undefined
+        this.count = 0
+    }
+
     toString() {
         if (this.head == null) {
             return ''
