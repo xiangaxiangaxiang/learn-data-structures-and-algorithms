@@ -1,10 +1,10 @@
-import { defaultEquals } from '../util'
+import { defaultEquals, IEqualsFunction } from '../util'
 import { Node } from './models/linked-list-models'
 
 export class LinkedList<T> {
     protected count = 0
     protected head: Node<T> | undefined
-    constructor(protected equalsFn = defaultEquals) {
+    constructor(protected equalsFn: IEqualsFunction<T> = defaultEquals) {
         this.count = 0
         this.head = undefined
         this.equalsFn = equalsFn
@@ -99,11 +99,11 @@ export class LinkedList<T> {
         }
         let objString = `${this.head.element}`
         let current = this.head.next
-        while (current.next) {
-            objString = `${objString} ${current.element}`
+        for (let i = 1; i < this.size() && current != null; i++) {
+            objString = `${objString},${current.element}`
             current = current.next
         }
-        return `${objString} ${current.element}`
+        return objString
     }
 
     getElementAt(index: number) {

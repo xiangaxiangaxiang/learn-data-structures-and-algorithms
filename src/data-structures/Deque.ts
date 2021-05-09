@@ -85,7 +85,7 @@ export class Deque<T = any> {
 }
 
 // test
-console.log('==========')
+console.log('========== 双端队列 =============')
 
 const deque = new Deque<string>()
 console.log(deque.isEmpty())

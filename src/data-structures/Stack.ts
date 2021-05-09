@@ -81,6 +81,8 @@ export class ObjectStack<T> {
 }
 
 // example
+console.log('========== 栈 =============')
+
 function decimalToBinary(decNumber: number) {
     const remStack = new ObjectStack()
     let number = decNumber

@@ -10,6 +10,20 @@ export class DoublyLinkedList<T> extends LinkedList<T> {
         this.tail = undefined
     }
 
+    push(element: T) {
+        const node = new DoublyNode(element)
+
+        if (this.head == null) {
+            this.head = node
+            this.tail = node
+        } else {
+            this.tail.next = node
+            node.prev = this.tail
+            this.tail = node
+        }
+        this.count++
+    }
+
     insert(element: T, index: number) {
         if (index >= 0 && index <= this.count) {
             const node = new DoublyNode(element)
@@ -76,4 +90,38 @@ export class DoublyLinkedList<T> extends LinkedList<T> {
         super.clear()
         this.tail = undefined
     }
+
+    inverseToString() {
+        if (this.tail == null) {
+            return ''
+        }
+        let objString = `${this.tail.element}`
+        let previous = this.tail.prev
+        while (previous != null) {
+            objString = `${objString} ${previous.element}`
+            previous = previous.prev
+        }
+        return objString
+    }
 }
+
+// test
+console.log('========== 双向链表 =============')
+
+const doublyLinkedList = new DoublyLinkedList<string>()
+console.log(doublyLinkedList.isEmpty())
+doublyLinkedList.push('hello')
+doublyLinkedList.push('world')
+doublyLinkedList.push('cpx')
+console.log(doublyLinkedList.toString())
+console.log(doublyLinkedList.inverseToString())
+console.log(doublyLinkedList.size())
+console.log(doublyLinkedList.isEmpty())
+const index = doublyLinkedList.indexOf('hello')
+console.log(index)
+doublyLinkedList.insert('im', 2)
+doublyLinkedList.insert('xxx', 4)
+console.log(doublyLinkedList.toString())
+console.log(doublyLinkedList.size())
+doublyLinkedList.remove('xxx')
+console.log(doublyLinkedList.toString())

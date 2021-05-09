@@ -55,6 +55,8 @@ export class Queue<T = any> {
 }
 
 // test
+console.log('========== 队列 =============')
+
 const queue = new Queue()
 console.log(queue.isEmpty())
 queue.enqueue(6)
