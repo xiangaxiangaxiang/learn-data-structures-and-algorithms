@@ -13,7 +13,7 @@ export class BinarySearchTree<T> {
         }
     }
 
-    private insertNode(node: Node<T>, key: T) {
+    protected insertNode(node: Node<T>, key: T) {
         if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
             if (node.left == null) {
                 node.left = new Node<T>(key)

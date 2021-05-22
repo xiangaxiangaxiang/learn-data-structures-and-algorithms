@@ -13,3 +13,6 @@ export { HashTableLinearProbing } from './data-structures/hash-table-linear-prob
 export { HashTableLinearProbingLazy } from './data-structures/hash-table-linear-probing-lazy'
 export { HashTableSeparateChaining } from './data-structures/hash-table-separate-chaining'
 export { BinarySearchTree } from './data-structures/binary-search-tree'
+
+// 算法
+export { bubbleSort } from './algorithms/sorting/bubble-sort'
