@@ -16,3 +16,4 @@ export { BinarySearchTree } from './data-structures/binary-search-tree'
 
 // 算法
 export { bubbleSort } from './algorithms/sorting/bubble-sort'
+export { selectionSort } from './algorithms/sorting/selection-sort'
